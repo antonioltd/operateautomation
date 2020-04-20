@@ -1,0 +1,97 @@
+// var attempt = 3; // Variable to count number of attempts.
+// // Below function Executes on click of login button.
+// function validate() {
+//   var username = document.getElementById("username").value;
+//   var password = document.getElementById("password").value;
+//   if (username == "admin" && password == "password") {
+//     alert("Login successfully");
+//     window.location = "file:///C:/DemoSemantic/landingPage.html"; // Redirecting to other page.
+//     return false;
+//   } else {
+//     // attempt--; // Decrementing by one.
+//     // alert("You have left " + attempt + " attempt;");
+//     // Disabling fields after 3 attempts.
+//     if (attempt == 0) {
+//       document.getElementById("username").disabled = true;
+//       document.getElementById("password").disabled = true;
+//       document.getElementById("login").disabled = true;
+//       return false;
+//     }
+//   }
+// }
+
+// // const username = document.getElementById("username");
+// // const password = document.getElementById("password");
+// // const form = document.getElementById("form");
+// // const errorMessageElement = document.getElementById("error");
+
+// // form.addEventListener("submit", event => {
+// //   let messages = [];
+// //   if (username.value === "" || name.value === null) {
+// //     messages.push("Username is required");
+// //   }
+
+// //   if (password.value === "" || password.value === null) {
+// //     messages.push("Password is required");
+// //   }
+
+// //   if (password.value.length <= 6) {
+// //     messages.push("Password must be longer than 6 characters");
+// //   }
+
+// //   if (password.value === "password") {
+// //     messages.push("Password cannot be password");
+// //   }
+
+// //   if (messages.length > 0) {
+// //     event.preventDefault();
+// //     errorMessageElement.innerText = messages.join(" , ");
+// //   }
+// // });
+
+function clearWarning(field) {
+  var usernameErrorMessage = document.getElementById("username-error");
+  var passwordWarningMessage = document.getElementById("password-error");
+  if (field == "username" && this.isClicked) {
+    usernameErrorMessage.innerText = "";
+  }
+  if (field == "password") {
+    passwordWarningMessage.innerText = "";
+  }
+}
+function displayError(){
+  document.getElementById("errors").innerText = this.errorss;
+}
+
+function validate() {
+  this.isClicked = true;
+  this.errorss = [];
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var usernameErrorMessage = document.getElementById("username-error");
+  var passwordWarningMessage = document.getElementById("password-error");
+ 
+
+  //var successMessage = document.getElementById("success").innerText;
+  if (username == null || username == "" || username != "admin") {
+    this.errorss.push("Invalid username ");
+    
+    //usernameErrorMessage.innerText = "Invalid username!";
+    //usernameErrorMessage.style.display = "inline-block";
+    return false;
+  }
+  if (password == null || password == "" || password != "admin") {
+    this.errorss.push("invalid password");
+    
+    //passwordWarningMessage.innerText = "Invalid password";
+    //passwordWarningMessage.style.display = "inline-block";
+    return false;
+  }
+
+  if (password == "admin" && username == "admin") {
+    window.location.href = "landingPage.html"; // Redirecting to other page.
+  }
+  
+  
+  //usernameErrorMessage.style.display = "none";
+}
