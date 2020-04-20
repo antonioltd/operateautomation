@@ -2,7 +2,7 @@ var attempt = 3;
 function validate() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
-  if (username == "admin" && password == "admin") {
+  if (username.toLowerCase() == "admin" && password == "admin") {
     alert("Login successfully");
     window.location.href = "practice.html";
     return false;
