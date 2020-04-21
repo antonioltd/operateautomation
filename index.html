@@ -17,26 +17,33 @@
       <form id="form">
         <div class="ui placeholder segment">
           <div class="ui huge header center aligned">Console.WriteLine</div>
+
           <div class="column">
             <div class="ui form">
               <div class="field">
-                <div style="color: red;" id="username-error"></div>
-
-                <div id="errors"></div>
-
                 <label>Username</label>
                 <div class="ui left icon input">
-                  <input id="username" type="text" placeholder="Username" />
+                  <input
+                    onfocus="clearUsernameErrorMessage()"
+                    id="username"
+                    type="text"
+                    placeholder="Username"
+                  />
                   <i class="user icon"></i>
                 </div>
+                <div style="color: red;" id="username-error"></div>
               </div>
               <div class="field">
-                <div style="color: red;" id="password-error"></div>
                 <label>Password</label>
                 <div class="ui left icon input">
-                  <input id="password" type="password" />
+                  <input
+                    onfocus="clearPasswordErrorMessag()"
+                    id="password"
+                    type="password"
+                  />
                   <i class="lock icon"></i>
                 </div>
+                <div style="color: red;" id="password-error"></div>
               </div>
               <div
                 onclick="validate()"
@@ -46,7 +53,9 @@
               >
                 Submit
               </div>
+              <div class="ui huge header center aligned" style="color: red;" id="general-error"></div>
             </div>
+            <div id="warning-count-message" class="ui huge header center aligned" style="color: rgb(111, 228, 57);"></div>
           </div>
         </div>
       </form>
