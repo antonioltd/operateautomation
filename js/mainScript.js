@@ -50,12 +50,18 @@ function usernameClick() {
 
 function clearUsernameErrorMessage() {
   usernameErrMsg.innerHTML = "";
+  clearGeneralError();
 }
 
 function clearPasswordErrorMessag() {
   passwordErrMsg.innerHTML = "";
+  clearGeneralError();
 }
 
 function navigateTo(url) {
   window.location.href = url;
+}
+
+function clearGeneralError() {
+  genError.innerHTML = "";
 }
