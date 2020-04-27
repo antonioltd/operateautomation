@@ -7,26 +7,175 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
     />
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/practice.js"></script>
     <title>Automation Practice</title>
+    <style>
+      .ui.grid button {
+        color: orangered;
+        margin-bottom: 1em;
+        display: block;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <div class="ui container">
-      <input type="text" />
       <div class="ui segment">
         <div class="ui huge header center aligned">Mabuhay!</div>
       </div>
-      <div class="ui card">
-        <div class="content">
-          <div class="ui center aligned secondary button">OK</div>
+      <br />
+      <div class="ui grid">
+        <div class="four wide column">
+          <div
+            class="ui big teal label"
+            style="width: 100%; text-align: center; border-radius: 20px;"
+          >
+            JavaScript Popups
+          </div>
+          <div class="ui segment blue">
+            <div style="color: red;" class="jsAlertMsg"></div>
+            <button class="ui button" tabindex="0">
+              Alert
+            </button>
+            <div style="color: red;" class="jsConfirmtMsg"></div>
+            <button class="ui button" tabindex="1">
+              Confirm
+            </button>
+            <div style="color: red;" class="jsPromptMsg"></div>
+            <button class="ui button" tabindex="2">
+              Prompt
+            </button>
+          </div>
+        </div>
+        <div class="four wide column">
+          <div
+            class="ui big teal label"
+            style="width: 100%; text-align: center; border-radius: 20px;"
+          >
+            Radio Buttons
+          </div>
+          <div class="ui segment blue">
+            <div class="ui form">
+              <div class="grouped fields">
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="example2" checked="checked" />
+                    <label>Radio 1</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="example2" />
+                    <label>Radio 2</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="example2" />
+                    <label>Radio 3</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="example2" />
+                    <label>Radio 4</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui radio checkbox">
+                    <input type="radio" name="example2" />
+                    <label>Radio 5</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="four wide column">
+          <div
+            class="ui big teal label"
+            style="width: 100%; text-align: center; border-radius: 20px;"
+          >
+            Checkboxes
+          </div>
+          <div class="ui segment blue">
+            <div class="ui form">
+              <div class="grouped fields">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="example" />
+                  <label>Checkbox 1</label>
+                </div>
+              </div>
+              <div class="grouped fields">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="example" />
+                  <label>Checkbox 2</label>
+                </div>
+              </div><div class="grouped fields">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="example" />
+                  <label>Checkbox 3</label>
+                </div>
+              </div><div class="grouped fields">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="example" />
+                  <label>Checkbox 4</label>
+                </div>
+              </div><div class="grouped fields">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="example" />
+                  <label>Checkbox 5</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="four wide column">
+          <div
+          class="ui big teal label"
+          style="width: 100%; text-align: center; border-radius: 20px;"
+        >
+          Sliders
+        </div>
+        <div class="ui segment blue">
+          <div class="ui form">
+            <div class="ui form">
+              <div class="grouped fields">
+                <div class="field">
+                  <div class="ui slider checkbox">
+                    <input type="radio" name="throughput" checked="checked">
+                    <label>Slider 1</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui slider checkbox">
+                    <input type="radio" name="throughput">
+                    <label>Slider 2</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui slider checkbox">
+                    <input type="radio" name="throughput">
+                    <label>Slider 3</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui slider checkbox checked">
+                    <input type="radio" name="throughput">
+                    <label>Slider 4</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="ui card">
-        <div class="content">
-          <div id="okBtnSec" class="ui secondary button">OK</div>
         </div>
+        <div class="two wide column"></div>
+        <div class="eight wide column"></div>
+        <div class="six wide column"></div>
       </div>
     </div>
-
   </body>
 </html>
