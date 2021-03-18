@@ -51,6 +51,14 @@
         top: 65px;
       }
 
+      #back-to-home {
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        background-color: rgb(221, 18, 18);
+        color: #f0f0f2;
+      }
+
       a:link,
       a:visited {
         color: #38488f;
@@ -105,6 +113,12 @@
         Submit
       </button>
       <span class="warning-message hidden">Too low</span>
+      <input
+        onclick="location.href='index.html'"
+        type="button"
+        id="back-to-home"
+        value="Back to home"
+      />
     </div>
   </body>
 </html>
